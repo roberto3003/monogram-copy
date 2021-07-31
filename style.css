@@ -5,7 +5,7 @@
   --gap: calc(var(--line-h)*2);
   --gap-min: 0.5em;
   --radius: 1rem;
-  --font-size: clamp(0.8rem, 1.25vw, 2.5rem);
+  --font-size: clamp(0.8rem, 1vw, 2rem);
   --letter-spacing: 0.25em;
 }
 
@@ -33,7 +33,7 @@
   --text-70: rgba(46, 49, 49, 0.7);
   --text-contrast: var(--white);
   --theme: #F1F8F6;
-  --medium: #D4E9E2;
+  --medium:#E0E0E0;
   --medium2: #F3F1E7;
   --contrast: lightsteelblue;
   --accent: #006341;
@@ -290,7 +290,7 @@ hr {
 .responsive {
   grid-template-columns: repeat(
   auto-fill,
-  minmax(10em, 1fr)
+  minmax(12em, 1fr)
   );
   gap: var(--gap);
 }
@@ -695,13 +695,46 @@ input:not(:placeholder-shown):invalid {
   /* **************************************************************************
    *************************************************************************** */
 
-  .footer {
---font-size: clamp(0.8rem, 1vw, 1rem);	
-font-size: var(--font-size);
-letter-spacing: initial;
+  
+ .h1 {
+   background-image: url("./images/hero.webp");
+   background-position: -12em 0;
+   background-color: var(--medium);
+ }
+
+
+@media only screen and (max-width: 70em) {
+  .h1 {
+   background-position: 0 -19em;
+  }
 }
 
-.footer .container, .footer-left, .footer-center {
+.console-1 .bg-image {
+  background-image: url("./images/yellow.webp");
+}
+
+
+.console-2 .bg-image {
+  background-image: url("./images/orange.webp");
+}
+
+
+
+.card {
+  gap: 0;
+}
+
+.card > * {
+  margin: 0;
+}
+
+.card .title {
+  padding: 0;
   align-items: baseline;
-  flex-basis: calc(( 10em - 35%) * 999);
+  justify-content: flex-end;
+}
+
+.card h3 {
+  margin-block-start: var(--line-h);
+  margin-inline-end: auto;
 }
