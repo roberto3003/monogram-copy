@@ -406,10 +406,9 @@ hr {
   top: 0;
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 70em) {
   .header {
 	position: initial;
-	padding-block: calc(var(--line-h)*2);
   }
 }
 
@@ -816,15 +815,28 @@ color: var(--accent);
 
 .dropdown-menu input:checked ~ * {
   display: block;
+  text-align: center;
 }
 
 
 .dropdown-menu input:checked ~ .dropdown-content {
   background-color: var(--theme);
-  border-block-start: solid var(--text);
+  border-block-start: 1px solid var(--text);
+  padding-inline: 1em;
+  padding-block-end: var(--line-h);
+}
+
+
+.dropdown-menu input:checked ~ label {
+padding-block-end: calc(var(--line-h)/2);
 }
 
 .dropdown-menu input:checked ~ label .arrow::after {
 content: "▴"
+}
 
+
+@media only screen and (max-width: 30em) {
+.dropdown-menu input:checked ~ .dropdown-content {
+  position: initial;
 }
