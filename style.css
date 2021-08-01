@@ -1,6 +1,5 @@
 :root {
   --line-h: 1.5em;
-  --active: 1.1em;
   --padding: 1.5em;
   --gap: calc(var(--line-h)*2);
   --gap-min: 0.5em;
@@ -476,12 +475,6 @@ nav {
 nav li {
   padding-block-start: 0.5em;
 }
-
-
-nav .active:not(.footer .active) {
-  font-size: var(--active); 
-}
-
 
 nav .cta {
   background-color: var(--text);
