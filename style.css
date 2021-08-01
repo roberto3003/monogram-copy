@@ -443,6 +443,7 @@ hr {
   place-items: center;
   display: grid;
   margin-block: 0;
+  padding-block:0;
 }
 
 .main-nav nav li:not(.logo, .button, .active):hover, .active {
