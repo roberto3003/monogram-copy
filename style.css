@@ -316,7 +316,7 @@ hr {
   align-items: center;
 }
 
-.flex:not(.links) {
+.flex:not(.links, .main-nav) {
   padding-block-start: calc(var(--line-h)*2);
 }
 
@@ -407,15 +407,28 @@ hr {
 
 .main-nav {
   align-items: center;
-  gap: 0;
+  justify-content: flex-end;
+  row-gap: var(--gap-min);
+}
+
+@media only screen and (max-width: 70em) {
+.main-nav {
+  justify-content: center;
+  }
 }
 
 .logo {
   padding-inline-start: 0;
 }
 
+@media only screen and (max-width: 70em) {
+  .logo {
+	margin-block-end: calc(var(--line-h)/2);
+  }
+}
+
 .logo .img {
-  height: calc(var(--line-h)*2);
+  height: calc(var(line-h)*2);
 }
 
 .logo .img img {
@@ -423,9 +436,9 @@ hr {
 }
 
 .main-nav .links {
-  row-gap: 0;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center; 
+  row-gap: var(--gap-min);
 }
 
 .main-nav li {
@@ -446,6 +459,13 @@ hr {
 .separator {
   margin-inline-end: auto;
 }
+
+@media only screen and (max-width: 70em) {
+.separator {
+  margin-inline-end: initial;
+  }
+}
+
 
 .main-nav .button {
   margin: 0;
