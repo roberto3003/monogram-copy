@@ -785,6 +785,15 @@ input:not(:placeholder-shown):invalid {
   display: none;
 }
 
+.dropdown-menu label {
+  cursor: pointer;
+}
+
+.dropdown-menu label::after {
+content: "▾";
+color: var(--accent);
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -809,5 +818,7 @@ input:not(:placeholder-shown):invalid {
   border-block-start: solid var(--text);
 }
 
-.dropdown-menu input:checked ~ label {
+.dropdown-menu input:checked ~ label::after {
+content: "▴"
+
 }
