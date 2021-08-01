@@ -787,9 +787,15 @@ input:not(:placeholder-shown):invalid {
 
 .dropdown-menu label {
   cursor: pointer;
+  justify-content: space-around;
+  padding-inline: 2em;
 }
 
-.dropdown-menu label::after {
+.arrow {
+  padding-inline-start: 1em;
+}
+
+.arrow::after {
 content: "▾";
 color: var(--accent);
 }
@@ -818,7 +824,7 @@ color: var(--accent);
   border-block-start: solid var(--text);
 }
 
-.dropdown-menu input:checked ~ label::after {
+.dropdown-menu input:checked ~ label .arrow::after {
 content: "▴"
 
 }
