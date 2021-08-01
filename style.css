@@ -442,7 +442,6 @@ hr {
 .main-nav li {
   place-items: center;
   display: grid;
-  padding: 0.5em;
   margin-block: 0;
 }
 
@@ -786,6 +785,7 @@ input:not(:placeholder-shown):invalid {
 
 .dropdown-menu label {
   cursor: pointer;
+  border-inline: solid 1px;
   justify-content: space-around;
   padding-inline: 2em;
 }
@@ -803,10 +803,10 @@ color: var(--accent);
   display: none;
   position: absolute;
   top: 2.5em;
-  padding-block-end: 0.5em;
+  padding-block: calc(var(--line-h)/2);
 }
 
-.dropdown-content a {
+.dropdown-content a:not(:first-child) {
   display: block;
   margin-block-start: 1em;
   text-align: center;
@@ -821,9 +821,8 @@ color: var(--accent);
 
 .dropdown-menu input:checked ~ .dropdown-content {
   background-color: var(--theme);
-  border-block-start: 1px solid var(--text);
   padding-inline: 1em;
-  padding-block-end: var(--line-h);
+  padding-block: var(--line-h);
 }
 
 
