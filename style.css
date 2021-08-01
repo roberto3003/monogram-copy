@@ -448,8 +448,12 @@ hr {
   padding-block:0;
 }
 
-.main-nav nav li:not(.logo, .button, .active):hover, .active {
+.links li:not(.dropdown-menu, .button, .active, .li-icon):hover, .active:not(.logo, .li-icon) {
   border-block-end: solid var(--accent);
+}
+
+.active svg {
+  fill: var(--accent);
 }
 
 .main-nav li a {
@@ -694,7 +698,7 @@ input:not(:placeholder-shown):invalid {
 	color: var(--accent);
   }
 
-  .socials svg:hover, .links svg:hover:not(.main-page) {
+  .socials svg:hover, .links svg:hover, .main-nav svg:hover {
 	fill: var(--accent);
   }
 
