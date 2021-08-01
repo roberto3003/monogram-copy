@@ -776,3 +776,11 @@ input:not(:placeholder-shown):invalid {
 .module .button {
   margin-block-start: 0
 }
+
+.dropdown-button button {
+  color: currentColor;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  letter-spacing: var(--letter-spacing);
+}
