@@ -777,8 +777,37 @@ input:not(:placeholder-shown):invalid {
   margin-block-start: 0
 }
 
+.dropdown-menu {
+  position: relative
+}
+
+.dropdown-menu input {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  padding-block-end: 0.5em;
+}
+
 .dropdown-content a {
   display: block;
   margin-block-start: 1em;
   text-align: center;
+}
+
+
+.dropdown-menu input:checked ~ * {
+  display: block;
+}
+
+
+.dropdown-menu input:checked ~ .dropdown-content {
+  background-color: var(--theme);
+  border-block-start: solid var(--text);
+}
+
+.dropdown-menu input:checked ~ label {
 }
