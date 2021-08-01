@@ -718,6 +718,11 @@ input:not(:placeholder-shown):invalid {
   background-image: url("./images/orange.webp");
 }
 
+.console-master .bg-image {
+  background-image: url("./images/green.webp");
+}
+
+
 
 
 .card {
@@ -732,9 +737,14 @@ input:not(:placeholder-shown):invalid {
   padding: 0;
   align-items: baseline;
   justify-content: flex-end;
+  gap: 0;
+}
+
+.card .text {
+  margin-inline-end: auto;
 }
 
 .card h3 {
+ text-transform: uppercase; 
   margin-block-start: var(--line-h);
-  margin-inline-end: auto;
 }
