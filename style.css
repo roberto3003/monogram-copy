@@ -256,13 +256,13 @@ hr {
   margin: 0 auto;
 }
 
-.skip-main, .dropdown-menu input {
+.skip-main {
   position: absolute;
   top: 0;
   right: 99999px;
 }
 
-.skip-main:focus, .dropdown-menu input:focus {
+.skip-main:focus {
   right: initial;
 }
 
@@ -796,11 +796,20 @@ input:not(:placeholder-shown):invalid {
   margin-block-start: 0
 }
 
+/* Dropdown menu */
+
 .dropdown-menu {
   position: relative
 }
 
+.dropdown-menu input {
+  position: absolute;
+  top: 0;
+  right: 99999px;
+}
+
 .dropdown-menu input, .dropdown-menu input:focus {
+  right: initial;
   appearance: none;
   outline: none;
   padding: 0;
@@ -863,3 +872,5 @@ content: "▴"
 .dropdown-menu input:checked ~ .dropdown-content {
   position: initial;
 }
+
+
