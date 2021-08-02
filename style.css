@@ -452,6 +452,16 @@ hr {
   border-block-end: solid var(--accent);
 }
 
+@media only screen and (max-width: 30em) {
+  .links li:not(.dropdown-menu, .button, .active, .li-icon):hover, .active:not(.logo, .li-icon) {
+  border-block-end: none;
+	color: var(--accent);
+  }
+}
+
+
+
+
 .active svg {
   fill: var(--accent);
 }
