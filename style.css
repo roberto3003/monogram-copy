@@ -814,7 +814,6 @@ color: var(--accent);
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 2.5em;
   padding-block: calc(var(--line-h)/2);
 }
 
@@ -835,11 +834,6 @@ color: var(--accent);
   background-color: var(--theme);
   padding-inline: 1em;
   padding-block: var(--line-h);
-}
-
-
-.dropdown-menu input:checked ~ label {
-padding-block-end: calc(var(--line-h)/2);
 }
 
 .dropdown-menu input:checked ~ label .arrow::after {
