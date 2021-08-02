@@ -122,7 +122,6 @@
 		 :focus {
 		   outline: 0.12em solid currentColor;
 		   padding: 0.2em;
-		   font-size: 1.1em;
 		   text-decoration: none;
 		   box-shadow: var(--shadow);
 		 }
@@ -257,14 +256,14 @@ hr {
   margin: 0 auto;
 }
 
-.skip-main {
+.skip-main, .dropdown-menu input {
   position: absolute;
   top: 0;
-  right: 100%;
+  right: 99999px;
 }
 
-.skip-main:focus {
-  right: auto;
+.skip-main:focus, .dropdown-menu input:focus {
+  right: initial;
 }
 
 .hero {
@@ -801,13 +800,17 @@ input:not(:placeholder-shown):invalid {
   position: relative
 }
 
-.dropdown-menu input {
-  display: none;
+.dropdown-menu input, .dropdown-menu input:focus {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+
 }
 
 .dropdown-menu label {
   cursor: pointer;
-  border-inline: solid 1px;
   justify-content: space-around;
   padding-inline: 2em;
 }
@@ -824,7 +827,12 @@ color: var(--accent);
 .dropdown-content {
   display: none;
   position: absolute;
+  top: var(--line-h);
   padding-block: calc(var(--line-h)/2);
+}
+
+.dropdown-content a:hover {
+  color: var(--accent);
 }
 
 .dropdown-content a:not(:first-child) {
